@@ -1,0 +1,195 @@
+/*共通*/
+*{
+  font-family: しねきゃぷしょん; /*全体のフォント*/
+}
+
+/*水色部分全体*/
+.header{
+  position: relative;
+  height:135px;
+  background-color: #e5ffff;
+  }
+
+/*ログイン・アカウント作成ボタン*/
+.login{
+  font-size: 6pt;
+  float: right;
+  margin-right: 30px;
+  margin-top: 15px; /*位置指定*/
+}
+
+/*loginの文字について*/
+.login a{
+  color: black;
+  text-decoration: none;
+}
+
+/*カーソルを合わせたとき*/
+.login a:hover{
+  color: blue;
+}
+
+/*一橋生〜byHASC部分*/
+.logo{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  background-color: #e5ffff
+  }
+
+/*一橋生のための履修情報サイト*/
+.logo h1{
+  padding-top: 40px;
+  font-size: 10.5pt;
+}
+
+/*ひとつかみ！*/
+.logo h2{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 30pt;
+}
+
+/*presented by HASC*/
+.logo p{
+  float: right;
+  margin-top: 2px;
+  padding-right: 30px;
+  font-size: 8pt;
+  font-family:Myriad Variable Concept;
+}
+
+.logo a{
+  font-weight:bold;
+  font-size: 10pt;
+  font-family:Myriad Variable Concept;
+  color: black;
+  text-decoration: none;
+}
+
+
+/*緑部分全体*/
+.menu{
+  position: relative;
+  background-color: #54917f;
+  width: 100%;
+  height: 40px;
+}
+
+/*検索ボックス全体*/
+.searchArea{
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 50px;
+  justify-content: center; /*中央寄せ*/
+  width          : 290px;              /* BOXの幅               */
+  height         : 26px;               /* BOXの高さ             */
+  margin         : auto;               /* サンプルを中心に寄せ  */
+  letter-spacing : 0.1em;              /* 文字間隔              */
+  font-weight    : bold;               /* 太字                  */
+  line-height    : 0;                  /* 標準の行高さ          */
+}
+
+ /*テキスト入力欄*/
+.searchArea .searchText {
+  display        : block;              /* ブロック化            */
+  float          : left;               /* 横並び                */
+  box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
+  height         : 26px;               /* 入力の高さ            */
+  width          : 170px;              /* 入力の幅              */
+  margin         : 0;                  /* 外余白                */
+  padding        : 0 13px;             /* 内余白                */
+  border         : 2px solid #fff;  /* 枠線　幅,実践,色      */
+  border-radius  : 13px 0 0 13px;      /* 左上下の角丸          */
+  color          : #333;               /* 文字色                */
+  outline        : 0;                  /* 入力の薄い枠を非表示  */
+  font-size      : 14px;               /* フォントサイズ        */
+}
+
+ /*検索ボタン欄*/
+.searchArea .searchButton {
+  float          : left;               /* 横並び                */
+  box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
+  height         : 26px;               /* 入力の高さ            */
+  margin         : 0;                  /* 外余白                */
+  padding        : 6px 10px;           /* 内余白                */
+  border         : none;               /* 枠線　幅,実践,色      */
+  border-radius  : 0 13px 13px 0;      /* 右上下の角丸          */
+  background     : #005c42;            /* ボタンの色            */
+  color          : #fff;               /* 文字色                */
+  cursor         : pointer;            /* カーソル設定          */
+  line-height    : 14px;               /* 1行の高さ             */
+  font-size      : 14px;               /* フォントサイズ        */
+}
+
+ /*検索ボタン欄にフォーカスか来たとき*/
+.searchArea .searchText:focus {
+  background     : #cfe7ff;            /* フォーカス時の背景色  */
+}
+
+ /* --- IEの入力エリア右側×消し -------------------------*/
+.searchArea .searchText::-ms-clear {
+  display        : none;               /* ×を消す              */
+}
+
+/*ここからハンバーガーメニューに関して*/
+:root {
+  --hamburger-menu-size: 40px; /* メニューの大きさ */
+  --hamburger-menu-padding: 12px;
+  --hamburger-menu-border-px: 0.5px; /* 線の太さ */
+  --hamburger-menu-border-color: #fff; /* 線の色 */
+  --hamburger-menu-transition: 0.3s; /* アニメーション秒数 */
+}
+
+
+.hamburger-menu {
+  cursor: pointer;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #005c42;
+}
+
+
+.hamburger-menu-line {
+  position: absolute;
+  transition: var(--hamburger-menu-transition);
+  width: calc(100% - var(--hamburger-menu-padding) * 2);
+  height: var(--hamburger-menu-border-px);
+  background-color: var(--hamburger-menu-border-color);
+}
+
+
+.line-top {
+  top: var(--hamburger-menu-padding);
+  left: var(--hamburger-menu-padding);
+}
+
+.line-middle {
+  top: calc(50% - var(--hamburger-menu-border-px)/2);
+  left: var(--hamburger-menu-padding);
+}
+
+.line-bottom {
+  bottom: var(--hamburger-menu-padding);
+  left: var(--hamburger-menu-padding);
+}
+
+
+.hamburger-menu-active > .line-top {
+  top: calc(50% - var(--hamburger-menu-border-px)/2);
+  transform: rotate(45deg);
+}
+
+.hamburger-menu-active > .line-middle {
+  width: 0;
+  height: 0;
+  left: var(--hamburger-menu-padding);
+}
+
+.hamburger-menu-active > .line-bottom {
+  top: calc(50% - var(--hamburger-menu-border-px)/2);
+  transform: rotate(-45deg);
+}
+/*ここまでハンバーガーメニューについて*/

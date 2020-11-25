@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ひとつかみ</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}" type="text/css">
+    {% block stylesheet %}{% endblock %}
+  </head>
+
+  <body>
+    <div class="header">
+       <div class="login">
+        <a href="login-page.html">ログイン</a>
+        <a href="create-account.html">アカウント作成</a>
+       </div>
+
+      <div class="logo">
+       <h1>一橋生のための履修情報サイト</h1>
+       <h2 href="index.html">ひとつかみ！(仮)</h2>
+       <p>presented by <a href="http://hit-hasc.com">HASC</a></p>
+       <!--はすくのロゴ-->
+       </div>
+    </div>
+
+    <div class="menu">
+       <div class="hamburger-menu">
+   　　　 <div class="hamburger-menu-line line-top"></div>
+   　　　 <div class="hamburger-menu-line line-middle"></div>
+    　　　<div class="hamburger-menu-line line-bottom"></div>
+  　　</div>　　
+
+      　<div class="searchArea" id="makeImg">
+  <input type="text" id="inText" class="searchText">
+  <div class="searchButton">
+    <span>授業検索</span>
+  </div>
+</div>
+     </div>
+
+   </div>
+
+	{% block contents %}
+	{% endblock %}
+
+  </body>
+</html>
